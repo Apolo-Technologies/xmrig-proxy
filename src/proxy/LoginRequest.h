@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -33,9 +33,9 @@ class LoginRequest
 public:
     enum ClientTypes {
         OtherClient,
-        XMRigClient,
-        XMRig20Client,   // In versions 2.0.1 and 2.0.2 nicehash not explicitly enabled for donations.
-        XMRigProxyClient // Proxy does not support nicehash for upstream.
+        ZRMigClient,
+        ZRMig20Client,   // In versions 2.0.1 and 2.0.2 nicehash not explicitly enabled for donations.
+        ZRMigProxyClient // Proxy does not support nicehash for upstream.
     };
 
     inline LoginRequest() :

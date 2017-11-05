@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(xmrig-proxy)
+project(zrmig-proxy)
 
 
 option(WITH_GOOGLE_BREAKPAD "Use Google Breakpad" OFF)
@@ -109,7 +109,7 @@ set(SOURCES
     src/proxy/workers/Worker.cpp
     src/proxy/workers/Workers.cpp
     src/Summary.cpp
-    src/xmrig.cpp
+    src/zrmig.cpp
    )
 
 if (WIN32)
@@ -141,7 +141,7 @@ else()
     set(EXTRA_LIBS pthread uuid)
 endif()
 
-add_definitions(/DXMRIG_PROXY_PROJECT)
+add_definitions(/DZRMIG_PROXY_PROJECT)
 add_definitions(/DUNICODE)
 add_definitions(/D__STDC_FORMAT_MACROS)
 add_definitions(/DAPP_DEVEL)
@@ -207,7 +207,7 @@ if (WITH_GOOGLE_BREAKPAD)
     include_directories(/usr/local/include/breakpad)
     set(GOOGLE_BREAKPAD_LIBS breakpad_client)
 else()
-    add_definitions(/DXMRIG_NO_GOOGLE_BREAKPAD)
+    add_definitions(/DZRMIG_NO_GOOGLE_BREAKPAD)
 endif()
 
 if (WITH_HTTPD)
@@ -220,8 +220,8 @@ if (WITH_HTTPD)
         message(FATAL_ERROR "microhttpd NOT found: use `-DWITH_HTTPD=OFF` to build without http deamon support")
     endif()
 else()
-    add_definitions(/DXMRIG_NO_HTTPD)
-    add_definitions(/DXMRIG_NO_API)
+    add_definitions(/DZRMIG_NO_HTTPD)
+    add_definitions(/DZRMIG_NO_API)
 endif()
 
 include_directories(src)

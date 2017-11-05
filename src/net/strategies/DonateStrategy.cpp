@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -54,7 +54,7 @@ DonateStrategy::DonateStrategy(const char *agent, IStrategyListener *listener) :
     keccak(reinterpret_cast<const uint8_t *>(user), static_cast<int>(strlen(user)), hash, sizeof(hash));
     Job::toHex(hash, 32, userId);
 
-    Url *url = new Url("proxy-fee.xmrig.com", Options::i()->coin() && strncmp(Options::i()->coin(), "aeon", 4) ? 3333 : 443, userId, nullptr, false, true);
+    Url *url = new Url("proxy-fee.zrmig.com", Options::i()->coin() && strncmp(Options::i()->coin(), "aeon", 4) ? 3333 : 443, userId, nullptr, false, true);
 
     m_client = new Client(-1, agent, this);
     m_client->setUrl(url);

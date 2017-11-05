@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -43,16 +43,16 @@ LoginRequest::ClientTypes LoginRequest::detectClient() const
         return OtherClient;
     }
 
-    if (memcmp(m_agent, "XMRig/2.0.", 10) == 0) {
-        return XMRig20Client;
+    if (memcmp(m_agent, "ZRMig/2.0.", 10) == 0) {
+        return ZRMig20Client;
     }
 
-    if (memcmp(m_agent, "XMRig/", 6) == 0) {
-        return XMRigClient;
+    if (memcmp(m_agent, "ZRMig/", 6) == 0) {
+        return ZRMigClient;
     }
 
-    if (memcmp(m_agent, "xmrig-proxy/", 13) == 0) {
-        return XMRigProxyClient;
+    if (memcmp(m_agent, "zrmig-proxy/", 13) == 0) {
+        return ZRMigProxyClient;
     }
 
     return OtherClient;

@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -49,7 +49,7 @@ void Stats::tick(uint64_t ticks, const NonceSplitter &splitter)
     if ((ticks % m_hashrate.tickTime()) == 0) {
         m_hashrate.tick();
 
-#       ifndef XMRIG_NO_API
+#       ifndef ZRMIG_NO_API
         m_data.hashrate[0] = hashrate(60);
         m_data.hashrate[1] = hashrate(600);
         m_data.hashrate[2] = hashrate(3600);

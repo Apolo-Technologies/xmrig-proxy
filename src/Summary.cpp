@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -49,9 +49,9 @@ static void print_versions()
 
 
     if (Options::i()->colors()) {
-        Log::i()->text("\x1B[01;32m * \x1B[01;37mVERSIONS:     \x1B[01;36mxmrig-proxy/%s\x1B[01;37m libuv/%s%s", APP_VERSION, uv_version_string(), buf);
+        Log::i()->text("\x1B[01;32m * \x1B[01;37mVERSIONS:     \x1B[01;36mzrmig-proxy/%s\x1B[01;37m libuv/%s%s", APP_VERSION, uv_version_string(), buf);
     } else {
-        Log::i()->text(" * VERSIONS:     xmrig-proxy/%s libuv/%s%s", APP_VERSION, uv_version_string(), buf);
+        Log::i()->text(" * VERSIONS:     zrmig-proxy/%s libuv/%s%s", APP_VERSION, uv_version_string(), buf);
     }
 }
 
@@ -88,7 +88,7 @@ static void print_bind()
 }
 
 
-#ifndef XMRIG_NO_API
+#ifndef ZRMIG_NO_API
 static void print_api()
 {
     if (Options::i()->apiPort() == 0) {
@@ -117,7 +117,7 @@ void Summary::print()
     print_pools();
     print_bind();
 
-#   ifndef XMRIG_NO_API
+#   ifndef ZRMIG_NO_API
     print_api();
 #   endif
 

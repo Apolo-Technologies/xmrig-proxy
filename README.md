@@ -1,32 +1,32 @@
-# XMRig Proxy
+# ZRMig Proxy
 
-Extremely high performance Monero (XMR) Stratum protocol proxy, can easily handle over 100K connections on cheap $5 (1024 MB) virtual machine. Reduce number of pool connections up to 256 times, 100K workers become just 391 worker on pool side. Written on C++/libuv same as [XMRig](https://github.com/xmrig/xmrig) miner.
+Extremely high performance Zerium (ZRM) Stratum protocol proxy, can easily handle over 100K connections on cheap $5 (1024 MB) virtual machine. Reduce number of pool connections up to 256 times, 100K workers become just 391 worker on pool side. Written on C++/libuv same as [ZRMig](https://github.com/zrmig/zrmig) miner.
 
 ## Compatibility
 :warning: :warning: :warning: **Nicehash support must be enabled on miner side, it mandatory.** :warning: :warning: :warning:
 
-* Compatible with any Monero and AEON pools, strongly recommended use pool with fixed diff feature.
-* Any miner with nicehash support, `--nicehash` option for [XMRig](https://github.com/xmrig/xmrig), `"nicehash_nonce": true,` for xmr-stak-cpu.
-* [Comparison](https://github.com/xmrig/xmrig-proxy/wiki/Comparison) with other proxies.
+* Compatible with any Zerium and AEON pools, strongly recommended use pool with fixed diff feature.
+* Any miner with nicehash support, `--nicehash` option for [ZRMig](https://github.com/zrmig/zrmig), `"nicehash_nonce": true,` for xmr-stak-cpu.
+* [Comparison](https://github.com/zrmig/zrmig-proxy/wiki/Comparison) with other proxies.
 
 ## Why?
-This proxy designed and created for handle donation traffic from XMRig. No one other solution works fine with high connection/disconnection rate.
+This proxy designed and created for handle donation traffic from ZRMig. No one other solution works fine with high connection/disconnection rate.
 
 ## Download
-* Binary releases: https://github.com/xmrig/xmrig-proxy/releases
-* Git tree: https://github.com/xmrig/xmrig-proxy.git
-  * Clone with `git clone https://github.com/xmrig/xmrig-proxy.git` :hammer: [Build instructions](https://github.com/xmrig/xmrig-proxy/wiki/Build).
+* Binary releases: https://github.com/zrmig/zrmig-proxy/releases
+* Git tree: https://github.com/zrmig/zrmig-proxy.git
+  * Clone with `git clone https://github.com/zrmig/zrmig-proxy.git` :hammer: [Build instructions](https://github.com/zrmig/zrmig-proxy/wiki/Build).
   
 ## Usage
-:boom: If you use Linux and want handle more than **1000 connections**, you need [increase limits of open files](https://github.com/xmrig/xmrig-proxy/wiki/Ubuntu-setup).
+:boom: If you use Linux and want handle more than **1000 connections**, you need [increase limits of open files](https://github.com/zrmig/zrmig-proxy/wiki/Ubuntu-setup).
 ### Basic example
 ```
-xmrig-proxy.exe -o pool.minemonero.pro:5555 -u YOUR_WALLET -p x --bind 0.0.0.0:3333 --bind 0.0.0.0:5555 
+zrmig-proxy.exe -o pool.minemonero.pro:5555 -u YOUR_WALLET -p x --bind 0.0.0.0:3333 --bind 0.0.0.0:5555 
 ```
 
 ### Failover
 ```
-xmrig-proxy.exe -o pool.minemonero.pro:5555 -u YOUR_WALLET1 -o pool.supportxmr.com:5555 -u YOUR_WALLET2 -p x --bind 0.0.0.0:5555 
+zrmig-proxy.exe -o pool.minemonero.pro:5555 -u YOUR_WALLET1 -o pool.supportxmr.com:5555 -u YOUR_WALLET2 -p x --bind 0.0.0.0:5555 
 ```
 For failover you can add multiple pools, maximum count not limited.
   
@@ -62,9 +62,9 @@ For failover you can add multiple pools, maximum count not limited.
 
 Default donation fee is 2% can be reduced to 1% via `donate-level` option. Donation fee applyed only for second and more pool connection. If you use only one pool connection (up to 256 workers) there is no fee.
 
-* XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
+* ZRM: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
 * BTC: `1P7ujsXeX7GxQwHNnJsRMgAdNkFZmNVqJT`
 
 ## Contacts
-* support@xmrig.com
-* [reddit](https://www.reddit.com/user/XMRig/)
+* support@zrmig.com
+* [reddit](https://www.reddit.com/user/ZRMig/)
